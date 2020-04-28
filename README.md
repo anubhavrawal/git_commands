@@ -24,7 +24,7 @@ The following paths are ignored by one of your .gitignore files:
 <folder_name>
 Use -f if you really want to add them.
 ```
-**It's not a error message just a warning** 
+> It's not an error message just a warning
 
 Remove these file if you wish or just ignore and continue if this does not bother you. 
 
