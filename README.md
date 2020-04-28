@@ -62,7 +62,7 @@ Moving back to your terminal, lets test the connection with
 
 `ssh -T git@github.com`
 
-the above command will process, type `yes` when prompted and then it will ask for your **passphrase if you had setup one when it was prompted last time**. Enter the **passphrase** and the execution should look like bellow:
+the above command will process, type `yes` when prompted and then it will ask for your **passphrase if you had setup one before**. Enter the **passphrase** and the execution should look like bellow:
 
 ```
 $ ssh -T git@github.com
