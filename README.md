@@ -139,6 +139,6 @@ Step 3. Push your changes to your git repo.
 
 ### Remove untacked files
 
-1. First know what you will be deleting: ` $ git clean -nfd `
+1. First know what you will be deleting: `$ git clean -nfd`
 
 1. Then delete it, if all looks good: `$ git clean -fd `
