@@ -8,6 +8,12 @@ Tell the Git who you are
 
 `$ git config --global user.email johndoe@example.com `
 
+## Clone your assignment
+
+Git clonning means to store a local copy of the repository. We will be using a local copy to edit and make changes and push them for submission.
+
+`$git clone <assignment's https url>`
+
 ## Pushing your assignment
 
 Remember to clean all the binary files and the files before you proceed with this. Makefiles's `make clean` should do if you have set it up correctly.
