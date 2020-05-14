@@ -123,12 +123,21 @@ Before you say push enter the following command so that git locally store your u
 
 ` $git checkout -f `
 
+### Reset the head to a previous commit
+
+`$ git reset --hard <commit-hash>`
+> Replace `<commit-hash>` with your actual commit hash numbers
+
+> Notice that only first 8 digits/numbers(or more) should be sufficient to  uniquely identify that commit
+
 
 ### Find out why you committed the last time
 
-Must follow the above steps for this to be relevant
+`$ git log `
 
-` $git log `
+> Must follow the steps ar the beginning for this to be relevant
+
+`$ git reflog`
 
 ### For untracking a folder:
 
@@ -148,3 +157,9 @@ Step 3. Push your changes to your git repo.
 1. First know what you will be deleting: `$ git clean -nfd`
 
 1. Then delete it, if all looks good: `$ git clean -fd `
+
+### Solving merge conflit
+
+Anything locally is before the `=====` section and the version online is the one after before `<<<<<<<` section folowed by a hash.
+
+Remove anything section that you want to do not want to commit and then re-add and merge.
