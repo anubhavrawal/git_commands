@@ -4,19 +4,19 @@
 
 Tell the Git who you are
 
-```
-$ git config --global user.name "John Doe" 
+``` Shell
+$ git config --global user.name "John Doe"
 ```
 
-```
-$ git config --global user.email johndoe@example.com 
+```Shell
+$ git config --global user.email johndoe@example.com
 ```
 
 ## Clone your assignment
 
 Git clonning means to store a local copy of the repository. We will be using a local copy to edit and make changes and push them for submission.
 
-```
+```Shell
 $ git clone <assignment's https url>
 ```
 
@@ -26,34 +26,36 @@ Remember to clean all the binary files and the files before you proceed with thi
 
 **Step 1.** Stage all the tracked changes
 
-```
-$ git add * 
+```Shell
+$ git add *
 ```
 
-it might prompt you with the following if you have files or folders in your directory that are mentioned within the `.gitignore ` file.
+it might prompt you with the following if you have files or folders in your directory that are mentioned within the `.gitignore` file.
 
-```
+```Shell
+$ git add *
 The following paths are ignored by one of your .gitignore files:
 <file_name>
 <folder_name>
 Use -f if you really want to add them.
 ```
+
 > It's not an error message just a warning
 
-Remove these file if you wish or just ignore and continue if this does not bother you. 
+Remove these file if you wish or just ignore and continue if this does not bother you.
 
 **Step 2.** Commit these changes with a message explaining the reason for the submitting the assignment this could be basic fix for resubmission details.
 
-```
-$ git commit -m "Version 0.1" -m "Reason for the commit" 
+```Shell
+$ git commit -m "Version 0.1" -m "Reason for the commit"
 ```
 
 >An alternative for `m` that will allow us to skip **Step 1.** is `-am`. Here the additional `a` stands for add.
 
 **Step 3.** Push all these changes
 
-```
-$ git push 
+```Shell
+$ git push
 ```
 
 > Note always go for `git pull` before staging changes when collaborating with multiple people on the same repo.
@@ -64,31 +66,31 @@ Tired of entering your username and password each time you push your changes? Le
 
 Lets begin for generating your customized SSH encryption key
 
+```Shell
+$ ssh-keygen -t rsa -C "johndoe@example.com"
 ```
-$ ssh-keygen -t rsa -C "johndoe@example.com" 
-```
-
 
 For ideal results:
 
-```
+```Shell
 $ ssh-keygen -t rsa -C "johndoe@example.com
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/<your_username>/.ssh/id_rsa): /<your_username>/.ssh/id_rsa
 
 Enter passphrase (empty for no passphrase): <enter a passphrase with at least 8 characters>
 ```
+
 Go to your GitHub account settings and select `SSH and GPG keys` tab and select `New SSH key` button. Give a title you wish and copy the content of the file `~/.ssh/id_rsa.pub` to the key section.
 
-Moving back to your terminal, lets test the connection with 
+Moving back to your terminal, lets test the connection with
 
-```
+```Shell
 $ ssh -T git@github.com
 ```
 
 the above command will process, type `yes` when prompted and then it will ask for your **passphrase if you had setup one before**. Enter the **passphrase** and the execution should look like bellow:
 
-```
+```Shell
 $ ssh -T git@github.com
 The authenticity of host 'github.com (140.82.114.4)' can't be established.
 RSA key fingerprint is SHA256:<your_key>.
@@ -101,11 +103,11 @@ Then, `cd` into your cloned repository and enter the command:
 
 `$ git remote set-url origin git@github.com:wmucs<classcode>/<assignment_repository_name>.git`
 
-Now you have completed the ssh setup for your repository, from now on your `git push` will not prompt form username and password. 
+Now you have completed the ssh setup for your repository, from now on your `git push` will not prompt form username and password.
 
-**Note:** Your `$ git push` might execute as 
+**Note:** Your `$ git push` might execute as
 
-```
+```Shell
 $ git push
 Warning: Permanently added the RSA host key for IP address '140.82.113.4' to the list of known hosts.
 Counting objects: 2, done.
@@ -130,7 +132,6 @@ Before you say push enter the following command so that git locally store your u
 
 `$ git config --global credential.helper store`
 
-
 ## Other helpful commands
 
 ### For removing user credentials
@@ -139,42 +140,40 @@ Before you say push enter the following command so that git locally store your u
 
 ### Discard all changes since last commit
 
-`$ git checkout -f `
+`$ git checkout -f`
 
 ### Reset the head to a previous commit
 
 `$ git reset --hard <commit-hash>`
 > Replace `<commit-hash>` with your actual commit hash numbers
 
-> Notice that only first 8 digits/numbers(or more) should be sufficient to  uniquely identify that commit
+**Notice:** Only first 8 digits/numbers(or more) should be sufficient to  uniquely identify that commit
 
+### Find more about your previous commits
 
-### Find out why you committed the last time
-
-`$ git log `
+`$ git log`
 
 > Must follow the steps ar the beginning for this to be relevant
 
 `$ git reflog`
 
-### For untracking a folder:
+### For untracking a folder
 
-Step 1. Add the folder path to your repo's root .gitignore file. 
+Step 1. Add the folder path to your repo's root .gitignore file.
 
-`path_to_your_folder/ `
+`path_to_your_folder/`
 
 Step 2. Remove the folder from your local git tracking, but keep it on your disk.
 
-`$ git rm -r --cached path_to_your_folder/ `
+`$ git rm -r --cached path_to_your_folder/`
 
 Step 3. Push your changes to your git repo.
-
 
 ### Remove untacked files
 
 1. First know what you will be deleting: `$ git clean -nfd`
 
-1. Then delete it, if all looks good: `$ git clean -fd `
+1. Then delete it, if all looks good: `$ git clean -fd`
 
 ### Solving merge conflit
 
