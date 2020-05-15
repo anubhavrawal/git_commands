@@ -48,7 +48,7 @@ Remove these file if you wish or just ignore and continue if this does not bothe
 $ git commit -m "Version 0.1" -m "Reason for the commit" 
 ```
 
->An alternative for `m` that will allow to to skip **Step 1.** is `-am`. Here the additional `a` stands for add.
+>An alternative for `m` that will allow us to skip **Step 1.** is `-am`. Here the additional `a` stands for add.
 
 **Step 3.** Push all these changes
 
