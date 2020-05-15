@@ -4,15 +4,21 @@
 
 Tell the Git who you are
 
-`$ git config --global user.name "John Doe" `
+```
+$ git config --global user.name "John Doe" 
+```
 
-`$ git config --global user.email johndoe@example.com `
+```
+$ git config --global user.email johndoe@example.com 
+```
 
 ## Clone your assignment
 
 Git clonning means to store a local copy of the repository. We will be using a local copy to edit and make changes and push them for submission.
 
-`$git clone <assignment's https url>`
+```
+$ git clone <assignment's https url>
+```
 
 ## Pushing your assignment
 
@@ -20,7 +26,9 @@ Remember to clean all the binary files and the files before you proceed with thi
 
 **Step 1.** Stage all the tracked changes
 
-` $git add * `
+```
+$ git add * 
+```
 
 it might prompt you with the following if you have files or folders in your directory that are mentioned within the `.gitignore ` file.
 
@@ -36,13 +44,17 @@ Remove these file if you wish or just ignore and continue if this does not bothe
 
 **Step 2.** Commit these changes with a message explaining the reason for the submitting the assignment this could be basic fix for resubmission details.
 
-` $git commit -m "Version 0.1" -m "Reason for the commit" `
+```
+$ git commit -m "Version 0.1" -m "Reason for the commit" 
+```
 
 >An alternative for `m` that will allow to to skip **Step 1.** is `-am`. Here the additional `a` stands for add.
 
 **Step 3.** Push all these changes
 
-` $git push `
+```
+$ git push 
+```
 
 > Note always go for `git pull` before staging changes when collaborating with multiple people on the same repo.
 
@@ -52,13 +64,15 @@ Tired of entering your username and password each time you push your changes? Le
 
 Lets begin for generating your customized SSH encryption key
 
-`ssh-keygen -t rsa -C "johndoe@example.com" `
+```
+$ ssh-keygen -t rsa -C "johndoe@example.com" 
+```
 
 
 For ideal results:
 
 ```
-$ssh-keygen -t rsa -C "johndoe@example.com
+$ ssh-keygen -t rsa -C "johndoe@example.com
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/<your_username>/.ssh/id_rsa): /<your_username>/.ssh/id_rsa
 
@@ -68,7 +82,9 @@ Go to your GitHub account settings and select `SSH and GPG keys` tab and select 
 
 Moving back to your terminal, lets test the connection with 
 
-`ssh -T git@github.com`
+```
+$ ssh -T git@github.com
+```
 
 the above command will process, type `yes` when prompted and then it will ask for your **passphrase if you had setup one before**. Enter the **passphrase** and the execution should look like bellow:
 
@@ -83,11 +99,11 @@ Hi <git username>! You've successfully authenticated, but GitHub does not provid
 
 Then, `cd` into your cloned repository and enter the command:
 
-`git remote set-url origin git@github.com:wmucs<classcode>/<assignment_repository_name>.git`
+`$ git remote set-url origin git@github.com:wmucs<classcode>/<assignment_repository_name>.git`
 
 Now you have completed the ssh setup for your repository, from now on your `git push` will not prompt form username and password. 
 
-**Note:** Your `git push` might execute as 
+**Note:** Your `$ git push` might execute as 
 
 ```
 $ git push
@@ -112,18 +128,18 @@ Save your credentials locally, so that git remember who you are.
 
 Before you say push enter the following command so that git locally store your username and password.
 
-`$git config --global credential.helper store`
+`$ git config --global credential.helper store`
 
 
 ## Other helpful commands
 
 ### For removing user credentials
 
-`git config --global --unset credential.helper`
+`$ git config --global --unset credential.helper`
 
 ### Discard all changes since last commit
 
-` $git checkout -f `
+`$ git checkout -f `
 
 ### Reset the head to a previous commit
 
@@ -149,7 +165,7 @@ Step 1. Add the folder path to your repo's root .gitignore file.
 
 Step 2. Remove the folder from your local git tracking, but keep it on your disk.
 
-` $git rm -r --cached path_to_your_folder/ `
+`$ git rm -r --cached path_to_your_folder/ `
 
 Step 3. Push your changes to your git repo.
 
