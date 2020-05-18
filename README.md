@@ -132,7 +132,9 @@ Save your credentials locally, so that git remember who you are.
 
 Before you say push enter the following command so that git locally store your username and password.
 
-`$ git config --global credential.helper store`
+``` Shell
+$ git config --global credential.helper store
+```
 
 ## Other helpful commands
 
