@@ -1,5 +1,12 @@
 # Basic Git Command List
 
+## How to use this guide
+
+Here anything that needs to be copied into shell has `$` at the beginning.
+
+**Be careful** with the commands that are enclosed like **`<this>`**. There commands needs to be replaced with appropriate context.
+
+
 ## First time Git setup
 
 Tell the Git who you are
