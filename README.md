@@ -4,7 +4,7 @@
 
 Here anything that needs to be copied into shell has `$` at the beginning.
 
-**Be careful** with the commands that are enclosed like **`<this>`**. There commands needs to be replaced with appropriate context.
+**Be careful** with the commands that are enclosed like **`<this>`**. These commands needs to be replaced with appropriate context.
 
 
 ## First time Git setup
