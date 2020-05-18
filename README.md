@@ -101,7 +101,9 @@ Hi <git username>! You've successfully authenticated, but GitHub does not provid
 
 Then, `cd` into your cloned repository and enter the command:
 
-`$ git remote set-url origin git@github.com:wmucs<classcode>/<assignment_repository_name>.git`
+``` Shell
+$ git remote set-url origin git@github.com:wmucs<classcode>/<assignment_repository_name>.git
+```
 
 Now you have completed the ssh setup for your repository, from now on your `git push` will not prompt form username and password.
 
