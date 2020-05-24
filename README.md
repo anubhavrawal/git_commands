@@ -15,7 +15,7 @@ $ git config --global user.name "John Doe"
 ```
 
 ```Shell
-$ git config --global user.email johndoe@example.com
+$ git config --global user.email "johndoe@example.com"
 ```
 
 ## Clone your assignment
