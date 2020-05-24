@@ -4,7 +4,7 @@
 
 Here anything that needs to be copied into shell has `$` at the beginning.
 
-**Be careful** with the commands that have **`<this>`** within them. These commands have sections that needs to be replaced with appropriate context.
+**Be careful** with the commands that have **`[this]`** within them. These commands have sections that needs to be replaced with appropriate context.
 
 ## First time Git setup
 
@@ -23,7 +23,7 @@ $ git config --global user.email johndoe@example.com
 Git clonning means to store a local copy of the repository. We will be using a local copy to edit and make changes and push them for submission.
 
 ```Shell
-$ git clone <assignment's https url>
+$ git clone [assignment's https url]
 ```
 
 ## Pushing your assignment
@@ -41,8 +41,8 @@ it might prompt you with the following if you have files or folders in your dire
 ```Shell
 $ git add *
 The following paths are ignored by one of your .gitignore files:
-<file_name>
-<folder_name>
+[file_name]
+[folder_name]
 Use -f if you really want to add them.
 ```
 
@@ -79,11 +79,11 @@ $ ssh-keygen -t rsa -C "johndoe@example.com"
 For ideal results:
 
 ```Shell
-$ ssh-keygen -t rsa -C "johndoe@example.com
+$ ssh-keygen -t rsa -C "johndoe@example.com"
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/<your_username>/.ssh/id_rsa): /<your_username>/.ssh/id_rsa
+Enter file in which to save the key (/home/[your_username]/.ssh/id_rsa): /[your_username]/.ssh/id_rsa
 
-Enter passphrase (empty for no passphrase): <enter a passphrase with at least 8 characters>
+Enter passphrase (empty for no passphrase): [enter a passphrase with at least 8 characters]
 ```
 
 Go to your GitHub account settings and select `SSH and GPG keys` tab and select `New SSH key` button. Give a title you wish and copy the content of the file `~/.ssh/id_rsa.pub` to the key section.
@@ -99,16 +99,16 @@ the above command will process, type `yes` when prompted and then it will ask fo
 ```Shell
 $ ssh -T git@github.com
 The authenticity of host 'github.com (140.82.114.4)' can't be established.
-RSA key fingerprint is SHA256:<your_key>.
+RSA key fingerprint is SHA256:[your_key].
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added 'github.com,140.82.114.4' (RSA) to the list of known hosts.
-Hi <git username>! You've successfully authenticated, but GitHub does not provide shell access.
+Hi [git username]! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 Then, `cd` into your cloned repository and enter the command:
 
 ``` Shell
-$ git remote set-url origin git@github.com:wmucs<classcode>/<assignment_repository_name>.git
+$ git remote set-url origin git@github.com:wmucs[classcode]/[assignment_repository_name].git
 ```
 
 Now you have completed the ssh setup for your repository, from now on your `git push` will not prompt form username and password.
@@ -124,7 +124,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (2/2), 220 bytes | 220.00 KiB/s, done.
 Total 2 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:wmucs3240/<repo-name>.git
+To github.com:wmucs3240/[repo-name].git
    c9398d6..acd1536  master -> master
 ```
 
@@ -154,8 +154,8 @@ $ git config --global credential.helper store
 
 ### Reset the head to a previous commit
 
-`$ git reset --hard <commit-hash>`
-> Replace `<commit-hash>` with your actual commit hash numbers
+`$ git reset --hard [commit-hash]`
+> Replace `[commit-hash]` with your actual commit hash numbers
 
 **Notice:** Only first 8 digits/numbers(or more) should be sufficient to  uniquely identify that commit
 
