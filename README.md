@@ -23,7 +23,7 @@ $ git config --global user.email "johndoe@example.com"
 Git clonning means to store a local copy of the repository. We will be using a local copy to edit and make changes and push them for submission.
 
 ```console
-$ git clone [assignment's https url]
+$ git clone [assignments https url]
 ```
 
 ## Pushing your assignment
