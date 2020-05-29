@@ -156,6 +156,7 @@ Great, lets start with making your the boring code folder into a git repository.
 
 ```console
 $ git init
+Initialized empty Git repository in /[path]/.git/
 ```
 Now you have a cool local git repository. Lets host this into the live repository in github.
 
