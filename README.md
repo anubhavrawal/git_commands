@@ -10,7 +10,7 @@ Here anything that needs to be copied into shell has `$` at the beginning.
 
 Tell the Git who you are
 
-``` Shell
+``` console
 $ git config --global user.name "John Doe"
 ```
 
@@ -32,13 +32,13 @@ Remember to clean all the binary files and the files before you proceed with thi
 
 **Step 1.** Stage all the tracked changes
 
-```Shell
+``` console
 $ git add *
 ```
 
 it might prompt you with the following if you have files or folders in your directory that are mentioned within the `.gitignore` file.
 
-```Shell
+``` console
 $ git add *
 The following paths are ignored by one of your .gitignore files:
 [file_name]
