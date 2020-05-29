@@ -148,6 +148,27 @@ $ git config --global credential.helper store
 
 `$ git config --global --unset credential.helper`
 
+### Organizing a Pre-written repository
+
+So, you jusst recently learned about git and want to manage your code with git and github?
+
+Great, lets start with making your the boring code folder into a git repository.
+
+```Shell
+$ git init
+```
+Now you have a cool local git repository. Lets host this into the live repository in github.
+
+Create an empty repository within your github repository and do wantever your preferances are and then run the following commands one at a time.
+
+```Shell
+$ git add *
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/[your_username]/[repo-name].git
+$ git push -u origin master
+```
+
+
 ### Discard all changes since last commit
 
 `$ git checkout -f`
