@@ -164,7 +164,7 @@ Create an empty repository within your github repository and do wantever your pr
 ```Shell
 $ git add *
 $ git commit -m "first commit"
-$ git remote add origin https://github.com/[your_username]/[repo-name].git
+$ git remote add origin https://github.com/[username]/[repo-name].git
 $ git push -u origin master
 ```
 
