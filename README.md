@@ -2,7 +2,7 @@
 
 ## How to use this guide
 
-Here anything that needs to be copied into shell has `$` at the beginning.
+Here anything that needs to be copied into console has `$` at the beginning.
 
 **Be careful** with the commands that have **`[this]`** within them. These commands have sections that needs to be replaced with appropriate context.
 
@@ -14,7 +14,7 @@ Tell the Git who you are
 $ git config --global user.name "John Doe"
 ```
 
-```Shell
+```console
 $ git config --global user.email "johndoe@example.com"
 ```
 
@@ -22,7 +22,7 @@ $ git config --global user.email "johndoe@example.com"
 
 Git clonning means to store a local copy of the repository. We will be using a local copy to edit and make changes and push them for submission.
 
-```Shell
+```console
 $ git clone [assignment's https url]
 ```
 
@@ -52,7 +52,7 @@ Remove these file if you wish or just ignore and continue if this does not bothe
 
 **Step 2.** Commit these changes with a message explaining the reason for the submitting the assignment this could be basic fix for resubmission details.
 
-```Shell
+```console
 $ git commit -m "Version 0.1" -m "Reason for the commit"
 ```
 
@@ -60,7 +60,7 @@ $ git commit -m "Version 0.1" -m "Reason for the commit"
 
 **Step 3.** Push all these changes
 
-```Shell
+```console
 $ git push
 ```
 
@@ -72,13 +72,13 @@ Tired of entering your username and password each time you push your changes? Le
 
 Lets begin for generating your customized SSH encryption key
 
-```Shell
+```console
 $ ssh-keygen -t rsa -C "johndoe@example.com"
 ```
 
 For ideal results:
 
-```Shell
+```console
 $ ssh-keygen -t rsa -C "johndoe@example.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/[your_username]/.ssh/id_rsa): /[your_username]/.ssh/id_rsa
@@ -90,13 +90,13 @@ Go to your GitHub account settings and select `SSH and GPG keys` tab and select 
 
 Moving back to your terminal, lets test the connection with
 
-```Shell
+```console
 $ ssh -T git@github.com
 ```
 
 the above command will process, type `yes` when prompted and then it will ask for your **passphrase if you had setup one before**. Enter the **passphrase** and the execution should look like bellow:
 
-```Shell
+```console
 $ ssh -T git@github.com
 The authenticity of host 'github.com (140.82.114.4)' can't be established.
 RSA key fingerprint is SHA256:[your_key].
@@ -107,7 +107,7 @@ Hi [git username]! You've successfully authenticated, but GitHub does not provid
 
 Then, `cd` into your cloned repository and enter the command:
 
-``` Shell
+``` console
 $ git remote set-url origin git@github.com:wmucs[classcode]/[assignment_repository_name].git
 ```
 
@@ -115,7 +115,7 @@ Now you have completed the ssh setup for your repository, from now on your `git 
 
 **Note:** Your `$ git push` might execute as
 
-```Shell
+```console
 $ git push
 Warning: Permanently added the RSA host key for IP address '140.82.113.4' to the list of known hosts.
 Counting objects: 2, done.
@@ -138,7 +138,7 @@ Save your credentials locally, so that git remember who you are.
 
 Before you say push enter the following command so that git locally store your username and password.
 
-``` Shell
+``` console
 $ git config --global credential.helper store
 ```
 
@@ -154,14 +154,14 @@ So, you jusst recently learned about git and want to manage your code with git a
 
 Great, lets start with making your the boring code folder into a git repository.
 
-```Shell
+```console
 $ git init
 ```
 Now you have a cool local git repository. Lets host this into the live repository in github.
 
 Create an empty repository within your github repository and do wantever your preferances are and then run the following commands one at a time.
 
-```Shell
+```console
 $ git add *
 $ git commit -m "first commit"
 $ git remote add origin https://github.com/[username]/[repo-name].git
