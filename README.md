@@ -212,3 +212,9 @@ Step 3. Push your changes to your git repo.
 Anything locally is before the `=====` section and the version online is the one after before `<<<<<<<` section folowed by a hash.
 
 Remove anything section that you want to do not want to commit and then re-add and merge.
+
+-----------------------------------------------------------
+
+**If you would like to contribute please follow the formart before you make a pull request**
+
+**Any contribution is appreciated and thanks in advance**
